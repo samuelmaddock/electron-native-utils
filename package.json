@@ -14,6 +14,10 @@
     "package": "node-pre-gyp package",
     "clean": "node-pre-gyp clean"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuelmaddock/electron-native-utils.git"
+  },
   "author": "Electron Community",
   "license": "MIT",
   "keywords": [
