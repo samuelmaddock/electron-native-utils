@@ -29,6 +29,8 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
+          # node-pre-gyp is broken on newer versions of Node on Windows
+          # https://github.com/mapbox/node-pre-gyp/issues/715
           node-version: '20.11.1'
           cache: 'yarn'
 
