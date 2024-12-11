@@ -31,6 +31,6 @@ jobs:
         run: npx node-pre-gyp package
 
       - name: Publish prebuilt binaries to GitHub Releases
-        run: npx node-pre-gyp-github publish
+        run: pwd && npx node-pre-gyp-github publish
         env:
           NODE_PRE_GYP_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
