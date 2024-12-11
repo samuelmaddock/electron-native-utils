@@ -12,6 +12,7 @@
     "build:debug": "node-pre-gyp build --build-from-source --debug --runtime=electron --target=33.2.1 --dist-url=https://electronjs.org/headers",
     "test": "node ./test.js",
     "package": "node-pre-gyp package",
+    "publish:prebuilds": "node ./scripts/publish-prebuilds.mjs",
     "clean": "node-pre-gyp clean"
   },
   "repository": {
@@ -30,7 +31,9 @@
     "bindings": "^1.5.0",
     "node-addon-api": "^6.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@octokit/rest": "^21.0.2"
+  },
   "gypfile": true,
   "prettier": {
     "singleQuote": true

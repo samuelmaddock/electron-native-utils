@@ -28,9 +28,9 @@ jobs:
         run: yarn build:ci
 
       - name: Package prebuilt binaries
-        run: npx node-pre-gyp package
+        run: yarn package
 
       - name: Publish prebuilt binaries to GitHub Releases
-        run: pwd && npx node-pre-gyp-github publish
+        run: yarn publish:prebuilds
         env:
           NODE_PRE_GYP_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
