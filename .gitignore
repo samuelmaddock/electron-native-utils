@@ -1,0 +1,6 @@
+build
+build-tmp-napi-*
+lib/binding
+node_modules
+.DS_Store
+yarn-error.log

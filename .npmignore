@@ -1,0 +1,6 @@
+.github
+build
+build-tmp-napi-*
+lib/binding
+*.log
+src/**/*.md

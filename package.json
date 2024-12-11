@@ -1,0 +1,43 @@
+{
+  "name": "electron-native-utils",
+  "version": "1.0.0",
+  "description": "Additional native utilities for Electron.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "install": "node-pre-gyp install --fallback-to-build --runtime=electron --target=33.2.1 --dist-url=https://electronjs.org/headers",
+    "postinstall": "node-pre-gyp configure --runtime=electron --target=33.2.1 --dist-url=https://electronjs.org/headers",
+    "build": "node-pre-gyp build --build-from-source --runtime=electron --target=33.2.1 --dist-url=https://electronjs.org/headers",
+    "build:ci": "node-pre-gyp clean rebuild --build-from-source --runtime=electron --target=33.2.1 --dist-url=https://electronjs.org/headers",
+    "build:debug": "node-pre-gyp build --build-from-source --debug --runtime=electron --target=33.2.1 --dist-url=https://electronjs.org/headers",
+    "test": "node ./test.js",
+    "package": "node-pre-gyp package",
+    "clean": "node-pre-gyp clean"
+  },
+  "author": "Electron Community",
+  "license": "MIT",
+  "keywords": [
+    "electron",
+    "native",
+    "utilities"
+  ],
+  "dependencies": {
+    "@mapbox/node-pre-gyp": "^1.0.11",
+    "bindings": "^1.5.0",
+    "node-addon-api": "^6.1.0"
+  },
+  "devDependencies": {},
+  "gypfile": true,
+  "prettier": {
+    "singleQuote": true
+  },
+  "binary": {
+    "module_name": "electron_native_utils",
+    "module_path": "./lib/binding/napi-v{napi_build_version}",
+    "package_name": "{module_name}-v{version}-napi-v{napi_build_version}-{platform}-{arch}.tar.gz",
+    "host": "https://github.com/samuelmaddock/electron-native-utils/releases/download/",
+    "napi_versions": [
+      8
+    ]
+  }
+}
