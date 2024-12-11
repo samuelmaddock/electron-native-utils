@@ -1,5 +1,5 @@
 {
-  "name": "electron-native-utils",
+  "name": "@samuelmaddock/electron-native-utils",
   "version": "1.0.0",
   "description": "Additional native utilities for Electron.",
   "main": "lib/index.js",
