@@ -8,6 +8,7 @@
         "src/main.cc",
         "src/native_input.cc",
         "src/native_input_mac.mm",
+        "src/utils.cc",
       ],
       "include_dirs": [
         "<!@(node -p \"require('node-addon-api').include\")",
